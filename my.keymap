@@ -28,12 +28,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | CTRL |  F1 |  F2 |  F3 | F4  |  F5 |   |     | LFT | DWN |  UP | RGT |      |
-// |  ESC |  F6 |  F7 |  F8 | F9  | F10 |   | F11 | F12 |     |     |     | RET  |
+// |  ESC |  F6 |  F7 |  F8 | F9  | F10 |   | F11 | F12 |     | BT2 |     | RET  |
 //                    | BT0 |     | BTCL|   | SPC |     | BT1 |
                         bindings = <
-   &kp TAB        &kp N1       &kp N2       &kp N3       &kp N4        &kp N5              &kp N6    &kp N7    &kp N8     &kp N9    &kp N0      &kp BSPC
-   &kp LCTRL      &kp F1       &kp F2       &kp F3       &kp F4        &kp F5              &trans    &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT   &trans
-   &kp LGUI       &kp F6       &kp F7       &kp F8       &kp F9        &kp F10             &kp F11   &kp F12   &trans     &trans    &trans      &kp RET
+   &kp TAB        &kp N1       &kp N2       &kp N3       &kp N4        &kp N5              &kp N6    &kp N7    &kp N8     &kp N9        &kp N0      &kp BSPC
+   &kp LCTRL      &kp F1       &kp F2       &kp F3       &kp F4        &kp F5              &trans    &kp LEFT  &kp DOWN   &kp UP        &kp RIGHT   &trans
+   &kp LGUI       &kp F6       &kp F7       &kp F8       &kp F9        &kp F10             &kp F11   &kp F12   &trans     &bt BT_SEL_2  &trans      &kp RET
                                             &bt BT_SEL 0 &trans        &bt BT_CLR          &kp SPACE &trans    &bt BT_SEL 1
                         >;
                 };
@@ -45,7 +45,7 @@
 // | ESC  |     |     |     |     |     |   |     |     |     |  {  |  }  |  RET |
 //                    | SHFT|     | GUI |   | SPC |     | ALT |
                         bindings = <
-   &kp TAB   &kp EXCL    &kp AT   &kp HASH    &kp DLLR         &kp PRCNT      &kp CARET   &kp AMPS   &kp KP_MULTIPLY   &kp LPAR   &kp RPAR   &kp BSPC
+   &kp TAB   &kp EXCL    &kp AT   &kp HASH    &kp DLLR         &kp PRCNT      &kp CARET   &kp AMPS   &kp ASTERISK      &kp LPAR   &kp RPAR   &kp BSPC
    &kp LCTRL &kp EQUAL   &kp PLUS &kp MINUS   &kp UNDERSCORE   &kp TILDE      &kp FSLH    &kp PIPE   &kp BLSH          &kp LBKT   &kp RBKT   &kp GRAVE
    &kp ESC   &trans      &trans   &trans      &trans           &trans         &trans      &trans     &trans            &kp LBRC   &kp RBRC   &kp RET
                                   &kp LSHFT   &trans           &kp LGUI       &kp SPACE   &trans     &kp RALT
