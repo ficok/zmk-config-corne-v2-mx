@@ -1,0 +1,146 @@
+#pragma once
+
+/ {
+    macros {
+        w_mov_l: w_mov_l { // move word left
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp LC(LEFT)
+                &macro-release
+            >;
+        };
+
+        w_mov_r: w_mov_r { // move word right
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp LC(RIGHT)
+                &macro-release
+            >;
+        };
+
+        w_sel_l: w_sel_l { // select word left
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp LS(LC(LEFT))
+                &macro-release
+            >;
+        };
+
+        w_sel_r: w_sel_r { // select word right
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp LS(LC(RIGHT))
+                &macro-release
+            >;
+        };
+
+        w_del_l: w_del_l { // delete word left
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp LC(BACKSPACE)
+                &macro-release
+            >;
+        };
+
+        w_del_r: w_del_r { // delete word right
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp LC(DELETE)
+                &macro-release
+            >;
+        };
+
+        l_mov_l: l_mov_l { // move line begin
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp HOME
+                &macro-release
+            >;
+        };
+
+        l_mov_r: l_mov_r { // move line end
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp END
+                &macro-release
+            >;
+        };
+
+        l_sel_l: l_sel_l { // select to line begin
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp LS(HOME)
+                &macro-release
+            >;
+        };
+
+        l_sel_r: l_sel_r { // select to line end
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp LS(END)
+                &macro-release
+            >;
+        };
+
+        l_del_l: l_del_l { // delete to line begin
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp LS(HOME) &kp DELETE
+                &macro-release
+            >;
+        };
+
+        l_del_r: l_del_r { // delete to line end
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp LS(END) &kp DELETE
+                &macro-release
+            >;
+        };
+
+        sel_ln: sel_ln { // select whole line
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp END &kp LS(HOME)
+                &macro-release
+            >;
+        };
+
+        del_ln: del_ln { // delete whole line
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+
+            bindings = <
+                &macro-press &kp END &kp LS(HOME) &kp DELETE
+                &macro-release
+            >;
+        };
+    };
+};
+
