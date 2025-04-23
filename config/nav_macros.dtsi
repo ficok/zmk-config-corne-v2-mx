@@ -107,7 +107,7 @@
 
             bindings
                 = <&macro_press &kp LS(END)>
-                , <&macro_press kp DELETE>
+                , <&macro_press &kp DELETE>
             ;
         };
 
