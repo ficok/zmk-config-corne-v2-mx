@@ -27,7 +27,8 @@
             lt { // override default minimal hold duration
                 tapping-term-ms = <150>;
             }
-        }
+        };
+
         keymap {
                 compatible = "zmk,keymap";
                 default_layer {
