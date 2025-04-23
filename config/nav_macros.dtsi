@@ -7,7 +7,7 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp LC(LEFT)>
+                = <&macro_press &kp LC(LEFT)>
             ;
         };
 
@@ -16,7 +16,7 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp LC(RIGHT)>
+                = <&macro_press &kp LC(RIGHT)>
             ;
         };
 
@@ -25,7 +25,7 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp LS(LC(LEFT))>
+                = <&macro_press &kp LS(LC(LEFT))>
             ;
         };
 
@@ -34,7 +34,7 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp LS(LC(RIGHT))>
+                = <&macro_press &kp LS(LC(RIGHT))>
             ;
         };
 
@@ -43,7 +43,7 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp LC(BACKSPACE)>
+                = <&macro_press &kp LC(BACKSPACE)>
             ;
         };
 
@@ -52,7 +52,7 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp LC(DELETE)>
+                = <&macro_press &kp LC(DELETE)>
             ;
         };
 
@@ -61,7 +61,7 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp HOME>
+                = <&macro_press &kp HOME>
             ;
         };
 
@@ -70,7 +70,7 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp END>
+                = <&macro_press &kp END>
             ;
         };
 
@@ -79,7 +79,7 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp LS(HOME)>
+                = <&macro_press &kp LS(HOME)>
             ;
         };
 
@@ -88,7 +88,7 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp LS(END)>
+                = <&macro_press &kp LS(END)>
             ;
         };
 
@@ -97,7 +97,7 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp LS(HOME) &kp DELETE>
+                = <&macro_press &kp LS(HOME) &kp DELETE>
             ;
         };
 
@@ -106,8 +106,8 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp LS(END)>
-                , <&macro-press kp DELETE>
+                = <&macro_press &kp LS(END)>
+                , <&macro_press kp DELETE>
             ;
         };
 
@@ -116,8 +116,8 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp END>
-                , <&macro-press &kp LS(HOME)>
+                = <&macro_press &kp END>
+                , <&macro_press &kp LS(HOME)>
             ;
         };
 
@@ -126,9 +126,9 @@
             #binding-cells = <0>;
 
             bindings
-                = <&macro-press &kp END>
-                , <&macro-press &kp LS(HOME)>
-                , <&macro-press &kp DELETE>
+                = <&macro_press &kp END>
+                , <&macro_press &kp LS(HOME)>
+                , <&macro_press &kp DELETE>
             ;
         };
     };
