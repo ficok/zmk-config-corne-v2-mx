@@ -1,5 +1,3 @@
-#pragma once
-
 / {
     macros {
         w_mov_l: w_mov_l { /* move word left */

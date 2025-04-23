@@ -7,12 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include "nav_macros.dtsi"
-
-#define LWR 1
-#define RSE 2
-#define NAV 3
-#define BTH 4
 
 /* TO-DO:
  * - DONE Bluetooth layer                   <- bluetooth_layer
@@ -23,6 +17,10 @@
  */
 
 / {
+        macros {
+            #include "nav_macros.dtsi"
+        };
+
         behaviors {
             lt { // override default minimal hold duration
                 tapping-term-ms = <150>;
@@ -39,13 +37,13 @@
      &kp TAB     &kp Q         &kp W         &kp E         &kp R            &kp T               &kp Y       &kp U       &kp I          &kp O       &kp P       &kp BSPC   
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* |     CTRL  |     A       |     S       |     D       |     F          |     G       |     |     H     | NAVL or J |     K        |     L     |     ;     |     '      | */
-     &kp LCTRL   &kp A         &kp S         &kp D         &kp F            &kp G               &kp H       &lt NAV J   &kp K          &kp L       &kp SEMI    &kp SQT
+     &kp LCTRL   &kp A         &kp S         &kp D         &kp F            &kp G               &kp H       &lt 3 J     &kp K          &kp L       &kp SEMI    &kp SQT
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* |     ESC   |     Z       |     X       |     C       |     V          | BTL or B    |     |     N     |     M     |     ,        |     .     |     /     |     RET    | */
-     &kp ESC     &kp Z         &kp X         &kp C         &kp V            &lt BTH B           &kp N       &kp M       &kp COMMA      &kp DOT     &kp FSLH    &kp RET
+     &kp ESC     &kp Z         &kp X         &kp C         &kp V            &lt 4 B             &kp N       &kp M       &kp COMMA      &kp DOT     &kp FSLH    &kp RET
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /*                                         |     SHF     |     LWR        |     GUI     |     |     SPC   |     RSE   |     ALT      |                                      */
-                                             &kp LSHFT     &mo LWR          &kp LGUI            &kp SPACE   &mo RSE     &kp RALT
+                                             &kp LSHFT     &mo 1            &kp LGUI            &kp SPACE   &mo 2       &kp RALT
 /*                                         ------------------------------------------------------------------------------------------                                       */
                         >;
                 };
@@ -89,13 +87,13 @@
                         bindings = <
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* |     TAB   |     BT1     |     BT2     |     BT3     |    BT4         |     BT5     |     |     ^     |     &     |     *        |     (     |     )     |     BTCL   | */
-     &kp TAB     &l_sel_l      &w_sel_l      &w_sel_r      &l_sel_r         &trans              &trans      &trans      &trans         &trans      &trans      &trans   
+     &kp TAB     <&l_sel_l>      <&w_sel_l>      <&w_sel_r>      <&l_sel_r>         &trans              &trans      &trans      &trans         &trans      &trans      &trans   
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* |     CTRL  |     =       |     +       |     -       |     _          |     ~       |     |     /     |     |     |     \        |     [     |    ]      |     `      | */
-     &kp LCTRL   &l_mov_l      &w_mov_l      &w_mov_r      &l_mov_r         &trans              &trans      &trans      &trans         &trans      &trans      &trans
+     &kp LCTRL   <&l_mov_l>      <&w_mov_l>      <&w_mov_r>      <&l_mov_r>         &trans              &trans      &trans      &trans         &trans      &trans      &trans
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* |   ESC     |             |             |             |                |             |     |           |           |              |     {     |     }     |     RET    | */
-     &kp ESC     &l_del_l      &w_del_l      &w_del_r      &l_del_r         &trans              &trans      &trans      &trans         &trans      &trans      &trans
+     &kp ESC     <&l_del_l>      <&w_del_l>      <&w_del_r>      <&l_del_r>         &trans              &trans      &trans      &trans         &trans      &trans      &trans
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /*                                         |     SHF     |                |     GUI     |     |     SPC   |           |     ALT     |                                       */
                                              &kp LSHFT     &trans           &kp LGUI            &kp SPACE   &trans      &kp RALT
