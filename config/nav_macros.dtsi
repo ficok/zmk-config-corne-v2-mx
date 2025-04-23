@@ -2,7 +2,7 @@
 
 / {
     macros {
-        w_mov_l: w_mov_l { // move word left
+        w_mov_l: w_mov_l { /* move word left */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -11,7 +11,7 @@
             ;
         };
 
-        w_mov_r: w_mov_r { // move word right
+        w_mov_r: w_mov_r { /* move word right */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -20,7 +20,7 @@
             ;
         };
 
-        w_sel_l: w_sel_l { // select word left
+        w_sel_l: w_sel_l { /* select word left */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -29,7 +29,7 @@
             ;
         };
 
-        w_sel_r: w_sel_r { // select word right
+        w_sel_r: w_sel_r { /* select word right */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -38,7 +38,7 @@
             ;
         };
 
-        w_del_l: w_del_l { // delete word left
+        w_del_l: w_del_l { /* delete word left */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -47,7 +47,7 @@
             ;
         };
 
-        w_del_r: w_del_r { // delete word right
+        w_del_r: w_del_r { /* delete word right */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -56,7 +56,7 @@
             ;
         };
 
-        l_mov_l: l_mov_l { // move line begin
+        l_mov_l: l_mov_l { /* move line begin */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -65,7 +65,7 @@
             ;
         };
 
-        l_mov_r: l_mov_r { // move line end
+        l_mov_r: l_mov_r { /* move line end */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -74,7 +74,7 @@
             ;
         };
 
-        l_sel_l: l_sel_l { // select to line begin
+        l_sel_l: l_sel_l { /* select to line begin */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -83,7 +83,7 @@
             ;
         };
 
-        l_sel_r: l_sel_r { // select to line end
+        l_sel_r: l_sel_r { /* select to line end */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -92,7 +92,7 @@
             ;
         };
 
-        l_del_l: l_del_l { // delete to line begin
+        l_del_l: l_del_l { /* delete to line begin */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -101,7 +101,7 @@
             ;
         };
 
-        l_del_r: l_del_r { // delete to line end
+        l_del_r: l_del_r { /* delete to line end */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -111,7 +111,7 @@
             ;
         };
 
-        sel_ln: sel_ln { // select whole line
+        sel_ln: sel_ln { /* select whole line */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
@@ -121,7 +121,7 @@
             ;
         };
 
-        del_ln: del_ln { // delete whole line
+        del_ln: del_ln { /* delete whole line */
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
 
