@@ -17,9 +17,7 @@
  */
 
 / {
-        macros {
-            #include "nav_macros.dtsi"
-        };
+        #include "nav_macros.dtsi"
 
         behaviors {
             lt { // override default minimal hold duration
