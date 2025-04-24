@@ -17,9 +17,8 @@
  */
 
 / {
-        #include "nav_macros.dtsi"
-
         keymap {
+        #include "nav_macros.dtsi"
                 compatible = "zmk,keymap";
                 default_layer {
                         bindings = <
