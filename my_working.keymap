@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+        #include "nav_layers.dtsi"
         keymap {
                 compatible = "zmk,keymap";
 
