@@ -1,160 +1,158 @@
-/ {
-    macros {
-        w_mov_l: w_mov_l { /* move word left */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+macros {
+    w_mov_l: w_mov_l { /* move word left */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap   &kp LEFT>
-                , <&macro_release>
-            ;
-        };
+        bindings
+            = <&macro_press &kp LCTRL>
+            , <&macro_tap   &kp LEFT>
+            , <&macro_release>
+        ;
+    };
 
-        w_mov_r: w_mov_r { /* move word right */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    w_mov_r: w_mov_r { /* move word right */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap   &kp RIGHT>
-                , <&macro_release>
-            ;
-        };
+        bindings
+            = <&macro_press &kp LCTRL>
+            , <&macro_tap   &kp RIGHT>
+            , <&macro_release>
+        ;
+    };
 
-        w_sel_l: w_sel_l { /* select word left */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    w_sel_l: w_sel_l { /* select word left */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_press &kp LCTRL>
-                , <&macro_tap   &kp LEFT>
-                , <&macro_release>
-            ;
-        };
+        bindings
+            = <&macro_press &kp LSHFT>
+            , <&macro_press &kp LCTRL>
+            , <&macro_tap   &kp LEFT>
+            , <&macro_release>
+        ;
+    };
 
-        w_sel_r: w_sel_r { /* select word right */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    w_sel_r: w_sel_r { /* select word right */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_press &kp LCTRL>
-                , <&macro_tap   &kp RIGHT>
-                , <&macro_release>
-            ;
-        };
+        bindings
+            = <&macro_press &kp LSHFT>
+            , <&macro_press &kp LCTRL>
+            , <&macro_tap   &kp RIGHT>
+            , <&macro_release>
+        ;
+    };
 
-        w_del_l: w_del_l { /* delete word left */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    w_del_l: w_del_l { /* delete word left */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap   &kp BACKSPACE>
-                , <&macro_release>
-            ;
-        };
+        bindings
+            = <&macro_press &kp LCTRL>
+            , <&macro_tap   &kp BACKSPACE>
+            , <&macro_release>
+        ;
+    };
 
-        w_del_r: w_del_r { /* delete word right */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    w_del_r: w_del_r { /* delete word right */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap   &kp DELETE>
-                , <&macro_release>
-            ;
-        };
+        bindings
+            = <&macro_press &kp LCTRL>
+            , <&macro_tap   &kp DELETE>
+            , <&macro_release>
+        ;
+    };
 
-        l_mov_l: l_mov_l { /* move line begin */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    l_mov_l: l_mov_l { /* move line begin */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_tap &kp HOME>
-            ;
-        };
+        bindings
+            = <&macro_tap &kp HOME>
+        ;
+    };
 
-        l_mov_r: l_mov_r { /* move line end */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    l_mov_r: l_mov_r { /* move line end */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_tap &kp END>
-            ;
-        };
+        bindings
+            = <&macro_tap &kp END>
+        ;
+    };
 
-        l_sel_l: l_sel_l { /* select to line begin */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    l_sel_l: l_sel_l { /* select to line begin */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap   &kp HOME>
-                , <&macro_release>
-            ;
-        };
+        bindings
+            = <&macro_press &kp LSHFT>
+            , <&macro_tap   &kp HOME>
+            , <&macro_release>
+        ;
+    };
 
-        l_sel_r: l_sel_r { /* select to line end */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    l_sel_r: l_sel_r { /* select to line end */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap   &kp END>
-                , <&macro_release>
-            ;
-        };
+        bindings
+            = <&macro_press &kp LSHFT>
+            , <&macro_tap   &kp END>
+            , <&macro_release>
+        ;
+    };
 
-        l_del_l: l_del_l { /* delete to line begin */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    l_del_l: l_del_l { /* delete to line begin */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap   &kp HOME>
-                , <&macro_release>
-                , <&macro_tap   &kp DELETE>
-            ;
-        };
+        bindings
+            = <&macro_press &kp LSHFT>
+            , <&macro_tap   &kp HOME>
+            , <&macro_release>
+            , <&macro_tap   &kp DELETE>
+        ;
+    };
 
-        l_del_r: l_del_r { /* delete to line end */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    l_del_r: l_del_r { /* delete to line end */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap   &kp END>
-                , <&macro_release>
-                , <&macro_tap &kp DELETE>
-            ;
-        };
+        bindings
+            = <&macro_press &kp LSHFT>
+            , <&macro_tap   &kp END>
+            , <&macro_release>
+            , <&macro_tap &kp DELETE>
+        ;
+    };
 
-        sel_ln: sel_ln { /* select whole line */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    sel_ln: sel_ln { /* select whole line */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_tap   &kp END>
-                , <&macro_press &kp LSHFT>
-                , <&macro_tap   &kp HOME>
-                , <&macro_release>
-            ;
-        };
+        bindings
+            = <&macro_tap   &kp END>
+            , <&macro_press &kp LSHFT>
+            , <&macro_tap   &kp HOME>
+            , <&macro_release>
+        ;
+    };
 
-        del_ln: del_ln { /* delete whole line */
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+    del_ln: del_ln { /* delete whole line */
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
 
-            bindings
-                = <&macro_tap   &kp END>
-                , <&macro_press &kp LSHFT>
-                , <&macro_tap   &kp HOME>
-                , <&macro_release>
-                , <&macro_tap   &kp DELETE>
-            ;
-        };
+        bindings
+            = <&macro_tap   &kp END>
+            , <&macro_press &kp LSHFT>
+            , <&macro_tap   &kp HOME>
+            , <&macro_release>
+            , <&macro_tap   &kp DELETE>
+        ;
     };
 };
