@@ -22,7 +22,7 @@
 
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G      &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G      &kp H &lt 3 J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp ESC   &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RET
                 &kp LSHIFT  &mo 1 &kp LGUI      &kp SPACE &mo 2 &kp RALT
                         >;
@@ -54,6 +54,15 @@
    &trans &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET &kp AMPS &kp ASTERISK &kp LPAR &kp RPAR &kp BSPC
    &trans &kp EQUAL &kp PLUS &kp MINUS &kp UNDER &kp TILDE      &kp FSLH  &kp PIPE &kp BSLH        &kp LBKT &kp RBKT &kp GRAVE
    &trans &trans    &trans   &trans    &trans    &trans         &trans    &trans   &trans          &kp LBRC &kp RBRC &kp RET
+                              &kp LSHIFT &trans   &kp LGUI      &kp SPACE &trans   &kp RALT
+                        >;
+                };
+
+                nav_layer {
+                    bindings = <
+   &trans &l_sel_l &w_sel_l &w_sel_r &l_sel_r  &kp PRCNT      &kp CARET &kp AMPS &kp ASTERISK &kp LPAR &kp RPAR &kp BSPC
+   &trans &l_mov_l &w_mov_l &w_mov_r &l_mov_r &kp TILDE      &kp FSLH  &kp PIPE &kp BSLH        &kp LBKT &kp RBKT &kp GRAVE
+   &trans &l_del_l &w_del_l &w_del_r &l_del_r    &trans         &trans    &trans   &trans          &kp LBRC &kp RBRC &kp RET
                               &kp LSHIFT &trans   &kp LGUI      &kp SPACE &trans   &kp RALT
                         >;
                 };
