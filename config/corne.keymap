@@ -78,7 +78,7 @@
                         bindings = <
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* |     TAB   |     BT1     |     BT2     |     BT3     |    BT4         |     BT5     |     |     ^     |     &     |     *        |     (     |     )     |     BTCL   | */
-     &kp TAB     <&l_sel_l>      &w_sel_l      &w_sel_r      &l_sel_r         &trans              &trans      &trans      &trans         &trans      &trans      &trans   
+     &kp TAB     &l_sel_l      &w_sel_l      &w_sel_r      &l_sel_r         &trans              &trans      &trans      &trans         &trans      &trans      &trans   
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* |     CTRL  |     =       |     +       |     -       |     _          |     ~       |     |     /     |     |     |     \        |     [     |    ]      |     `      | */
      &kp LCTRL   &l_mov_l      &w_mov_l      &w_mov_r      &l_mov_r         &trans              &trans      &trans      &trans         &trans      &trans      &trans
