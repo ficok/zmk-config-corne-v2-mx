@@ -127,7 +127,7 @@ macros {
             = <&macro_press &kp LSHFT>
             , <&macro_tap   &kp END>
             , <&macro_release>
-            , <&macro_tap &kp DELETE>
+            , <&macro_tap   &kp DELETE>
         ;
     };
 
