@@ -61,4 +61,5 @@ save: save {
         = <&macro_press   &kp LCTRL>
         , <&macro_tap     &kp S>
         , <&macro_release &kp LCTRL>
+    ;
 };
