@@ -28,7 +28,7 @@
             td_esc_ctrl: tap_dance_esc_ctrl {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                tapping-term-ms = <150>;
+                tapping-term-ms = <200>;
                 bindings = <&kp LCTRL>, <&kp ESC>;
             };
         };

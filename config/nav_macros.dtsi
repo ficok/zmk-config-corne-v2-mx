@@ -3,9 +3,9 @@
         #binding-cells = <0>;
 
         bindings
-            = <&macro_press &kp LCTRL>
-            , <&macro_tap   &kp LEFT>
-            , <&macro_release>
+            = <&macro_press   &kp LCTRL>
+            , <&macro_tap     &kp LEFT>
+            , <&macro_release &kp LCTRL>
         ;
     };
 
@@ -14,9 +14,9 @@
         #binding-cells = <0>;
 
         bindings
-            = <&macro_press &kp LCTRL>
-            , <&macro_tap   &kp RIGHT>
-            , <&macro_release>
+            = <&macro_press   &kp LCTRL>
+            , <&macro_tap     &kp RIGHT>
+            , <&macro_release &kp LCTRL>
         ;
     };
 
@@ -25,10 +25,11 @@
         #binding-cells = <0>;
 
         bindings
-            = <&macro_press &kp LSHFT>
-            , <&macro_press &kp LCTRL>
-            , <&macro_tap   &kp LEFT>
-            , <&macro_release>
+            = <&macro_press   &kp LSHFT>
+            , <&macro_press   &kp LCTRL>
+            , <&macro_tap     &kp LEFT>
+            , <&macro_release &kp LCTRL>
+            , <&macro_release &kp LSHFT>
         ;
     };
 
@@ -37,10 +38,11 @@
         #binding-cells = <0>;
 
         bindings
-            = <&macro_press &kp LSHFT>
-            , <&macro_press &kp LCTRL>
-            , <&macro_tap   &kp RIGHT>
-            , <&macro_release>
+            = <&macro_press   &kp LSHFT>
+            , <&macro_press   &kp LCTRL>
+            , <&macro_tap     &kp RIGHT>
+            , <&macro_release &kp LCTRL>
+            , <&macro_release &kp LSHFT>
         ;
     };
 
@@ -49,9 +51,9 @@
         #binding-cells = <0>;
 
         bindings
-            = <&macro_press &kp LCTRL>
-            , <&macro_tap   &kp BACKSPACE>
-            , <&macro_release>
+            = <&macro_press   &kp LCTRL>
+            , <&macro_tap     &kp BACKSPACE>
+            , <&macro_release &kp LCTRL>
         ;
     };
 
@@ -60,9 +62,9 @@
         #binding-cells = <0>;
 
         bindings
-            = <&macro_press &kp LCTRL>
-            , <&macro_tap   &kp DELETE>
-            , <&macro_release>
+            = <&macro_press   &kp LCTRL>
+            , <&macro_tap     &kp DELETE>
+            , <&macro_release &kp LCTRL>
         ;
     };
 
@@ -89,9 +91,9 @@
         #binding-cells = <0>;
 
         bindings
-            = <&macro_press &kp LSHFT>
-            , <&macro_tap   &kp HOME>
-            , <&macro_release>
+            = <&macro_press   &kp LSHFT>
+            , <&macro_tap     &kp HOME>
+            , <&macro_release &kp LSHFT>
         ;
     };
 
@@ -100,9 +102,9 @@
         #binding-cells = <0>;
 
         bindings
-            = <&macro_press &kp LSHFT>
-            , <&macro_tap   &kp END>
-            , <&macro_release>
+            = <&macro_press   &kp LSHFT>
+            , <&macro_tap     &kp END>
+            , <&macro_release &kp LSHFT>
         ;
     };
 
@@ -111,10 +113,10 @@
         #binding-cells = <0>;
 
         bindings
-            = <&macro_press &kp LSHFT>
-            , <&macro_tap   &kp HOME>
-            , <&macro_release>
-            , <&macro_tap   &kp DELETE>
+            = <&macro_press   &kp LSHFT>
+            , <&macro_tap     &kp HOME>
+            , <&macro_release &kp LSHFT>
+            , <&macro_tap     &kp DELETE>
         ;
     };
 
@@ -123,10 +125,10 @@
         #binding-cells = <0>;
 
         bindings
-            = <&macro_press &kp LSHFT>
-            , <&macro_tap   &kp END>
-            , <&macro_release>
-            , <&macro_tap   &kp DELETE>
+            = <&macro_press   &kp LSHFT>
+            , <&macro_tap     &kp END>
+            , <&macro_release &kp LSHFT>
+            , <&macro_tap     &kp DELETE>
         ;
     };
 
@@ -135,10 +137,10 @@
         #binding-cells = <0>;
 
         bindings
-            = <&macro_tap   &kp END>
-            , <&macro_press &kp LSHFT>
-            , <&macro_tap   &kp HOME>
-            , <&macro_release>
+            = <&macro_tap     &kp END>
+            , <&macro_press   &kp LSHFT>
+            , <&macro_tap     &kp HOME>
+            , <&macro_release &kp LSHFT>
         ;
     };
 
@@ -147,10 +149,10 @@
         #binding-cells = <0>;
 
         bindings
-            = <&macro_tap   &kp END>
-            , <&macro_press &kp LSHFT>
-            , <&macro_tap   &kp HOME>
-            , <&macro_release>
-            , <&macro_tap   &kp DELETE>
+            = <&macro_tap     &kp END>
+            , <&macro_press   &kp LSHFT>
+            , <&macro_tap     &kp HOME>
+            , <&macro_release &kp LSHFT>
+            , <&macro_tap     &kp DELETE>
         ;
     };
