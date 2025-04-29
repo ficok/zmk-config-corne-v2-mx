@@ -63,3 +63,16 @@
             , <&macro_release &kp LCTRL>
         ;
     };
+    
+    bt_clr_all: bt_clr_all {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        
+        bindings
+            = <&macro_tap &bt BT_CLR 0>
+            , <&macro_tap &bt BT_CLR 1>
+            , <&macro_tap &bt BT_CLR 2>
+            , <&macro_tap &bt BT_CLR 3>
+            , <&macro_tap &bt BT_CLR 4>
+        ;
+    };
