@@ -32,8 +32,15 @@
             tapping-term-ms = <200>;
             bindings = <&kp LCTRL>, <&kp ESC>;
         };
+        
+        td_ralt_bth: tap_dance_ralt_bth {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&kp RALT>, <&mo BTH>;
+        };
     };
-    
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         bth_layer {
@@ -50,16 +57,16 @@
                 &kp TAB      &kp Q &kp W &kp E      &kp R   &kp T       &kp Y     &kp U   &kp I     &kp O   &kp P    &kp BSPC
                 &td_esc_ctrl &kp A &kp S &kp D      &kp F   &kp G       &kp H     &kp J   &kp K     &kp L   &kp SEMI &kp SQT
                 &kp LGUI     &kp Z &kp X &kp C      &kp V   &kp B       &kp N     &kp M   &kp COMMA &kp DOT &kp FSLH &kp RET
-                                         &kp LSHIFT &mo ITP &mo NUM     &kp SPACE &mo NAV &kp RALT
+                                         &kp LSHIFT &mo ITP &mo NUM     &kp SPACE &mo NAV &td_ralt_bth
             >;
         };
 
         num_layer {
             bindings = <
-                &trans  &kp MINUS &kp N7 &kp N8  &kp N9 &kp PLUS     &kp F1 &kp F2 &kp F3 &kp F4  &kp F5  &kp F6
-                &trans  &kp N0    &kp N4 &kp N5  &kp N6 &kp ASTRK    &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-                &trans  &kp EQUAL &kp N1 &kp N2  &kp N3 &kp FSLH     &trans &trans &trans &trans  &trans  &trans
-                                         &trans  &trans &trans       &trans &trans &trans
+                &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &kp F1 &kp F2 &kp F3 &kp F4  &kp F5  &kp F6
+                &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0    &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+                &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &trans  &trans
+                                     &trans &trans &trans    &trans &trans &trans
             >;
         };
 
@@ -67,7 +74,7 @@
             bindings = <
                 &trans &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &trans
                 &trans &kp EQUAL &kp PLUS &kp MINUS &kp UNDER &kp TILDE    &kp FSLH  &kp PIPE &kp BSLH  &kp LBKT &kp RBKT &kp GRAVE
-                &trans &trans    &trans   &trans    &trans    &trans       &trans    &trans   &trans    &kp LBRC &kp RBRC &mo BTH
+                &trans &trans    &trans   &trans    &trans    &trans       &trans    &trans   &trans    &kp LBRC &kp RBRC &trans
                                           &trans    &trans    &trans       &trans    &trans   &trans
             >;
         };
