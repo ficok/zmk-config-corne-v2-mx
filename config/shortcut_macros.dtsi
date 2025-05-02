@@ -113,8 +113,8 @@
         #binding-cells = <0>;
         
         bindings
-            , <&macro_tap &kp F9>
-        ;       
+            = <&macro_tap &kp F9>
+        ;
     };
     
     rmv_al_brkpt: remove_all_breakpoints {
