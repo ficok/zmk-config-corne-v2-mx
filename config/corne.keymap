@@ -103,9 +103,9 @@
 
         fn_layer {
             bindings = <
-                &td_bld_htrld        &kp C_AC_CLOSE &kp C_AC_OPEN &kp K_MENU   &kp K_CONTEXT_MENU &trans          &trans &kp C_BRI_INC &kp C_BRI_DEC &kp C_BRI_MIN &kp C_BRI_MAX &trans
-                &td_dbg_run          &trans         &trans        &kp PSCRN    &trans             &trans          &trans &kp K_VOL_UP  &kp K_VOL_DN  &kp K_MUTE    &trans        &trans
-                &td_brkpt_rmvallbkpt &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3       &bt BT_SEL 4    &trans &kp K_PREV    &kp K_PP      &kp K_NEXT    &trans        &trans
+                &trans        &kp C_AC_CLOSE &kp C_AC_OPEN &kp K_MENU   &kp K_CONTEXT_MENU &trans          &trans &kp C_BRI_INC &kp C_BRI_DEC &kp C_BRI_MIN &kp C_BRI_MAX &trans
+                &trans          &trans         &trans        &kp PSCRN    &trans             &trans          &trans &kp K_VOL_UP  &kp K_VOL_DN  &kp K_MUTE    &trans        &trans
+                &trans &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3       &bt BT_SEL 4    &trans &kp K_PREV    &kp K_PP      &kp K_NEXT    &trans        &trans
                                                                   &trans       &trans             &bt BT_CLR      &trans &trans        &bt BT_CLR_ALL
             >;
         };
