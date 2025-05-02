@@ -117,7 +117,7 @@
         ;
     };
     
-    rmv_al_brkpt: remove_all_breakpoints {
+    rmv_all_brkpt: remove_all_breakpoints {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         
