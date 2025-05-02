@@ -95,7 +95,7 @@
         bindings
             = <&macro_tap F5>
         ;
-    }
+    };
     
     debug: debug {
         compatible = "zmk,behavior-macro";
@@ -128,4 +128,4 @@
             , <&macro_release &kp LSHFT>
             , <&macro_release &kp LCTRL>
         ;
-    }
+    };
