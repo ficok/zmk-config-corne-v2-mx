@@ -31,6 +31,27 @@
             tapping-term-ms = <200>;
             bindings = <&kp LCTRL>, <&kp ESC>;
         };
+        
+        td_bld_htrld: tap_dance_build_hotreload {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&build>, <&hot_reload>;
+        };
+        
+        td_dbg_run: tap_dance_debug_run {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&debug>, <&run>;
+        };
+        
+        td_brkpt_rmvallbkpt: tap_dance_breakpoint_remove_all_breakpoints {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&add_rmv_brkpt>, <&rmv_all_brkpt>;
+        };
     };
 
     conditional_layers {
@@ -55,9 +76,9 @@
 
         num_layer {
             bindings = <
-                &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &kp F1 &kp F2 &kp F3 &kp F4  &kp F5  &kp F6
-                &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0    &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-                &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans  &trans  &trans
+                &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5    &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+                &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0  &kp F12
+                &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans  &trans
                                      &trans &trans &trans    &trans &trans &trans
             >;
         };
@@ -75,17 +96,17 @@
             bindings = <
                 &trans &l_sel_l &w_sel_l &w_sel_r &l_sel_r &trans      &cut   &copy    &paste   &undo  &redo     &kp DEL
                 &trans &l_mov_l &w_mov_l &w_mov_r &l_mov_r &trans      &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &save
-                &trans &l_del_l &w_del_l &w_del_r &l_del_r &trans      &trans &trans   &trans   &trans &trans    &kp C_AC_SAVE
+                &trans &l_del_l &w_del_l &w_del_r &l_del_r &trans      &trans &trans   &trans   &trans &trans    &trans
                                          &trans   &trans   &trans      &trans &trans   &trans
             >;
         };
 
         fn_layer {
             bindings = <
-                &trans &kp C_AC_CLOSE &kp C_AC_OPEN &kp K_MENU   &kp K_CONTEXT_MENU &trans          &trans &kp C_BRI_INC &kp C_BRI_DEC &kp C_BRI_MIN &kp C_BRI_MAX &trans
-                &trans &trans         &trans        &kp PSCRN    &trans             &trans          &trans &kp K_VOL_UP  &kp K_VOL_DN  &kp K_MUTE    &trans        &trans
-                &trans &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3       &bt BT_SEL 4    &trans &kp K_PREV    &kp K_PP      &kp K_NEXT    &trans        &trans
-                                                    &trans     &trans               &bt BT_CLR      &trans &trans        &bt BT_CLR_ALL
+                &td_bld_htrld        &kp C_AC_CLOSE &kp C_AC_OPEN &kp K_MENU   &kp K_CONTEXT_MENU &trans          &trans &kp C_BRI_INC &kp C_BRI_DEC &kp C_BRI_MIN &kp C_BRI_MAX &trans
+                &td_dbg_run          &trans         &trans        &kp PSCRN    &trans             &trans          &trans &kp K_VOL_UP  &kp K_VOL_DN  &kp K_MUTE    &trans        &trans
+                &td_brkpt_rmvallbkpt &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3       &bt BT_SEL 4    &trans &kp K_PREV    &kp K_PP      &kp K_NEXT    &trans        &trans
+                                                                  &trans       &trans             &bt BT_CLR      &trans &trans        &bt BT_CLR_ALL
             >;
         };
     };
