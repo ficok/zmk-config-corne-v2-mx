@@ -64,18 +64,18 @@
         ;
     };
 
-    // build: build {
-    //     compatible = "zmk,behavior-macro";
-    //     #binding-cells = <0>;
+    build: build {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
         
-    //     bindings
-    //         = <&macro_press   &kp LCTRL>
-    //         , <&macro_press   &kp LSHFT>
-    //         , <&macro_tap     &kp B>
-    //         , <&macro_release &kp LSHFT>
-    //         , <&macro_release &kp LCTRL>
-    //     ;
-    // };
+        bindings
+            = <&macro_press   &kp LCTRL>
+            , <&macro_press   &kp LSHFT>
+            , <&macro_tap     &kp B>
+            , <&macro_release &kp LSHFT>
+            , <&macro_release &kp LCTRL>
+        ;
+    };
     
     // hot_reload: hot_reload {
     //     compatible = "zmk,behavior-macro";
