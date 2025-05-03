@@ -97,16 +97,16 @@
         ;
     };
     
-    debug: debug {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
+    // debug: debug {
+    //     compatible = "zmk,behavior-macro";
+    //     #binding-cells = <0>;
         
-        bindings
-            = <&macro_press   &kp LCTRL>
-            , <&macro_tap     &kp F5>
-            , <&macro_release &kp LCTRL>
-        ;
-    };
+    //     bindings
+    //         = <&macro_press   &kp LCTRL>
+    //         , <&macro_tap     &kp F5>
+    //         , <&macro_release &kp LCTRL>
+    //     ;
+    // };
     
     // add_rmv_brkpt: add_rmv_brkpt {
     //     compatible = "zmk,behavior-macro";
