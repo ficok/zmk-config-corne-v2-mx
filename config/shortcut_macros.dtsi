@@ -77,16 +77,16 @@
         ;
     };
     
-    // hot_reload: hot_reload {
-    //     compatible = "zmk,behavior-macro";
-    //     #binding-cells = <0>;
+    hot_reload: hot_reload {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
         
-    //     bindings
-    //         = <&macro_press   &kp RALT>
-    //         , <&macro_tap     &kp F10>
-    //         , <&macro_release &kp RALT>
-    //     ;
-    // };
+        bindings
+            = <&macro_press   &kp RALT>
+            , <&macro_tap     &kp F10>
+            , <&macro_release &kp RALT>
+        ;
+    };
     
     // run: run {
     //     compatible = "zmk,behavior-macro";
