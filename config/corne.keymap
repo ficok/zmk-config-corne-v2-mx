@@ -32,26 +32,26 @@
             bindings = <&kp LCTRL>, <&kp ESC>;
         };
         
-        // td_bld_htrld: tap_dance_build_hotreload {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <200>;
-        //     bindings = <&build>, <&hot_reload>;
-        // };
+        td_bld_htrld: tap_dance_build_hotreload {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&build>, <&hot_reload>;
+        };
         
-        // td_dbg_run: tap_dance_debug_run {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <200>;
-        //     bindings = <&debug>, <&run>;
-        // };
+        td_dbg_run: tap_dance_debug_run {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&debug>, <&run>;
+        };
         
-        // td_brkpt_rmvallbkpt: tap_dance_breakpoint_remove_all_breakpoints {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <200>;
-        //     bindings = <&add_rmv_brkpt>, <&rmv_all_brkpt>;
-        // };
+        td_brkpt_rmvallbkpt: tap_dance_breakpoint_remove_all_breakpoints {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&add_rmv_brkpt>, <&rmv_all_brkpt>;
+        };
     };
 
     conditional_layers {
