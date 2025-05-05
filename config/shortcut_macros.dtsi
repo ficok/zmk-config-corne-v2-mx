@@ -108,14 +108,14 @@
         ;
     };
     
-    // add_rmv_brkpt: add_rmv_brkpt {
-    //     compatible = "zmk,behavior-macro";
-    //     #binding-cells = <0>;
+    add_rmv_brkpt: add_rmv_brkpt {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
         
-    //     bindings
-    //         = <&macro_tap &kp F9>
-    //     ;
-    // };
+        bindings
+            = <&macro_tap &kp F9>
+        ;
+    };
     
     // rmv_all_brkpt: rmv_all_brkpt {
     //     compatible = "zmk,behavior-macro";
