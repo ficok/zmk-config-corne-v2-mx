@@ -88,7 +88,7 @@
                 &trans &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp DEL
                 &trans &kp EQUAL &kp PLUS &kp MINUS &kp UNDER &kp TILDE    &kp FSLH  &kp PIPE &kp BSLH  &kp LBKT &kp RBKT &kp GRAVE
                 &trans &trans    &trans   &trans    &trans    &trans       &trans    &trans   &trans    &kp LBRC &kp RBRC &trans
-                                          &trans    &trans    &trans       &trans    &trans   &trans
+                                          &trans    &trans    &trans       &td_bld_htrld &td_dbg_run &td_brkpt_rmvallbkpt
             >;
         };
 
