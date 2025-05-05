@@ -88,14 +88,14 @@
         ;
     };
     
-    // run: run {
-    //     compatible = "zmk,behavior-macro";
-    //     #binding-cells = <0>;
+    run: run {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
         
-    //     bindings
-    //         = <&macro_tap F5>
-    //     ;
-    // };
+        bindings
+            = <&macro_tap &kp F5>
+        ;
+    };
     
     debug: debug {
         compatible = "zmk,behavior-macro";
@@ -117,15 +117,15 @@
         ;
     };
     
-    // rmv_all_brkpt: rmv_all_brkpt {
-    //     compatible = "zmk,behavior-macro";
-    //     #binding-cells = <0>;
+    rmv_all_brkpt: rmv_all_brkpt {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
         
-    //     bindings
-    //         = <&macro_press   &kp LCTRL>
-    //         , <&macro_press   &kp LSHFT>
-    //         , <&macro_tap     &kp F9>
-    //         , <&macro_release &kp LSHFT>
-    //         , <&macro_release &kp LCTRL>
-    //     ;
-    // };
+        bindings
+            = <&macro_press   &kp LCTRL>
+            , <&macro_press   &kp LSHFT>
+            , <&macro_tap     &kp F9>
+            , <&macro_release &kp LSHFT>
+            , <&macro_release &kp LCTRL>
+        ;
+    };
