@@ -7,10 +7,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#define NUM 1
-#define ITP 2
-#define NAV 3
-#define FN  4
+#define NUM 3
+#define ITP 1
+#define NAV 2
 
 /* todo
     copy, paste, cut
@@ -21,93 +20,70 @@
 
 
 / {
-    #include "nav_macros.dtsi"
     #include "shortcut_macros.dtsi"
-
-    behaviors {
-        td_esc_ctrl: tap_dance_esc_ctrl {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LCTRL>, <&kp ESC>;
-        };
-        
-        td_bld_htrld: tap_dance_build_hotreload {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&build>, <&hot_reload>;
-        };
-        
-        td_dbg_run: tap_dance_debug_run {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&debug>, <&run>;
-        };
-        
-        td_brkpt_rmvallbkpt: tap_dance_breakpoint_remove_all_breakpoints {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&add_rmv_brkpt>, <&rmv_all_brkpt>;
-        };
-    };
-
+    #include "nav_macros.dtsi"
+    
     conditional_layers {
         compatible = "zmk,conditional-layers";
         func_layer {
             if-layers = <NAV ITP>;
-            then-layer = <FN>;
+            then-layer = <NUM>;
+        };
+    };
+    
+    behaviors {
+        hrm: home_row_mod {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <260>;
+            bindings = <&kp>, <&kp>;
+            display-name = "Homerow-mod";
+            hold-trigger-on-release;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <131>;
         };
     };
     
     keymap {
         compatible = "zmk,keymap";
+        
 
+        
         default_layer {
             bindings = <
-                &kp TAB      &kp Q &kp W &kp E      &kp R   &kp T       &kp Y     &kp U   &kp I     &kp O   &kp P    &kp BSPC
-                &td_esc_ctrl &kp A &kp S &kp D      &kp F   &kp G       &kp H     &kp J   &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LGUI     &kp Z &kp X &kp C      &kp V   &kp B       &kp N     &kp M   &kp COMMA &kp DOT &kp FSLH &kp RET
-                                         &kp LSHIFT &mo NAV &mo NUM     &kp SPACE &mo ITP &kp RALT
-            >;
-        };
-
-        num_layer {
-            bindings = <
-                &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5    &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
-                &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0  &kp F12
-                &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans  &trans
-                                     &trans &trans &trans    &trans &trans &trans
-            >;
+                &none &kp Q        &kp W       &kp E       &kp R        &kp T       &kp Y     &kp U        &kp I       &kp O       &kp P           &none 
+                &none &hrm LCTRL A &hrm LCMD S &hrm LALT D &hrm LSHFT F &kp G       &kp H     &hrm RSHFT J &hrm RALT K &hrm RCMD L &hrm RCTRL SEMI &none 
+                &none &kp Z        &kp X       &kp C       &kp V        &kp B       &kp N     &kp M        &kp COMMA   &kp DOT     &kp DQT         &none 
+                                               &none       &mo NAV      &kp ENTER   &kp SPACE &mo ITP      &none
+           >;
         };
 
         interp_layer {
             bindings = <
-                &trans &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp DEL
-                &trans &kp EQUAL &kp PLUS &kp MINUS &kp UNDER &kp TILDE    &kp FSLH  &kp PIPE &kp BSLH  &kp LBKT &kp RBKT &kp GRAVE
-                &trans &trans    &trans   &trans    &trans    &trans       &trans    &trans   &trans    &kp LBRC &kp RBRC &trans
-                                          &trans    &trans    &trans       &td_bld_htrld &td_dbg_run &td_brkpt_rmvallbkpt
-            >;
+                &none &kp TAB   &kp LBKT  &kp LPAR &kp PLUS  &kp PRCNT   &kp AMPS  &kp MINUS &kp RPAR &kp RBKT &kp BSPC &none 
+                &none &kp EQUAL &kp GRAVE &kp LBRC &kp ASTRK &kp DLLR    &kp AT    &kp UNDER &kp RBRC &kp BSLH &kp FSLH &none 
+                &none &kp COLON &kp LT    &kp HASH &kp EXCL  &kp TILDE   &kp CARET &kp QMARK &kp PIPE &kp GT   &kp SQT  &none 
+                                          &none    &kp DEL   &kp ESC     &trans    &trans    &none
+           >;
         };
-
+        
         nav_layer {
             bindings = <
-                &trans &l_sel_l &w_sel_l &w_sel_r &l_sel_r &trans      &cut   &copy    &paste   &undo  &redo     &kp DEL
-                &trans &l_mov_l &w_mov_l &w_mov_r &l_mov_r &trans      &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &save
-                &trans &l_del_l &w_del_l &w_del_r &l_del_r &trans      &trans &trans   &trans   &trans &trans    &trans
-                                         &trans   &trans   &trans      &trans &trans   &trans
-            >;
+                &none &l_sel_l &w_sel_l &w_sel_r &l_sel_r &none      &none     &none    &none    &kp DEL &kp BSPC  &none 
+                &none &l_mov_l &w_mov_l &w_mov_r &l_mov_r &none      &kp PG_UP &kp LEFT &kp DOWN &kp UP  &kp RIGHT &none 
+                &none &l_del_l &w_del_l &w_del_r &l_del_r &kp LSHFT  &kp PG_DN &none    &none    &none   &none     &none 
+                                        &none    &trans   &trans     &trans    &trans   &none
+           >;
         };
 
-        fn_layer {
+        number_layer {
             bindings = <
-                &trans        &kp C_AC_CLOSE &kp C_AC_OPEN &kp K_MENU   &kp K_CONTEXT_MENU &trans          &trans &kp C_BRI_INC &kp C_BRI_DEC &kp C_BRI_MIN &kp C_BRI_MAX &trans
-                &trans          &trans         &trans        &kp PSCRN    &trans             &trans          &trans &kp K_VOL_UP  &kp K_VOL_DN  &kp K_MUTE    &trans        &trans
-                &trans &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3       &bt BT_SEL 4    &trans &kp K_PREV    &kp K_PP      &kp K_NEXT    &trans        &trans
-                                                                  &trans       &trans             &bt BT_CLR      &trans &trans        &bt BT_CLR_ALL
-            >;
+                &none &kp F1 &kp F2 &kp F3 &kp F4    &kp F5    &kp F6 &kp F7  &kp F8 &kp F9 &kp F10 &none 
+                &none &kp N1 &kp N2 &kp N3 &kp N4    &kp N5    &kp N6 &kp N7  &kp N8 &kp N9 &kp N0  &none 
+                &none &none  &none  &none  &kp F11   &none     &none  &kp F12 &none  &none  &none   &none 
+                                    &none  &trans    &trans    &trans &trans  &none
+           >;
         };
     };
 };
