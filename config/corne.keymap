@@ -7,9 +7,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#define NUM 3
+#define DFT 0
 #define ITP 1
 #define NAV 2
+#define NUM 3
+#define BTH 4
 
 /* todo
     copy, paste, cut
@@ -42,6 +44,15 @@
             hold-trigger-on-release;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <131>;
+        };
+        
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&tog>, <&kp>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <500>;
+            display-name = "Hold-Tap";
         };
     };
     
@@ -81,8 +92,17 @@
             bindings = <
                 &none &kp F1 &kp F2 &kp F3 &kp F4    &kp F5    &kp F6 &kp F7  &kp F8 &kp F9 &kp F10 &none 
                 &none &kp N1 &kp N2 &kp N3 &kp N4    &kp N5    &kp N6 &kp N7  &kp N8 &kp N9 &kp N0  &none 
-                &none &none  &none  &none  &kp F11   &none     &none  &kp F12 &none  &none  &none   &none 
+                &none &ht BTH x  &none  &none  &kp F11   &none     &none  &kp F12 &none  &none  &none   &none 
                                     &none  &trans    &trans    &trans &trans  &none
+           >;
+        };
+        
+        bluetooth_layer {
+            bindings = <
+                &none &none        &none        &none        &none        &none          &bt BT_CLR     &none &bt BT_NXT &none &none &none
+                &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_CLR_ALL &none &bt BT_PRV &none &none &none
+                &none &none        &none        &none        &none        &none          &none          &none &none      &none &none &none
+                                                &none        &none        &tog DFT       &none          &none &none
            >;
         };
     };
