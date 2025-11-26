@@ -3,7 +3,7 @@ combos {
     
     combo_space {
         timeout-ms = <50>;
-        key-positions = <7 8 9 10>;
+        key-positions = <19 20 21 22>;
         bindings = <&kp SPACE>;
     };
     
@@ -15,19 +15,19 @@ combos {
     
     combo_tab {
         timeout-ms = <50>;
-        key-positions = <7 8 9>;
+        key-positions = <2 3 4>;
         bindings = <&kp TAB>;
     };
     
     combo_backspace {
         timeout-ms = <50>;
-        key-positions = <28 29 30>;
+        key-positions = <19 20 21>;
         bindings = <&kp BACKSPACE>;
     };
     
     combo_delete {
         timeout-ms = <50>;
-        key-positions = <22 23 24>;
+        key-positions = <7 8 9>;
         bindings = <&kp DELETE>;
     };
 };
