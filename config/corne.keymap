@@ -23,6 +23,7 @@
 / {
     #include "shortcut_macros.dtsi"
     #include "nav_macros.dtsi"
+    #include "combos.dtsi"
     
     behaviors {
         ht: hold_tap {
