@@ -132,6 +132,28 @@
         ;
     };
 
+    doc_top: doc_top {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        
+        bindings
+            = <&macro_press   &kp LCTRL>
+            , <&macro_tap     &kp HOME>
+            , <&macro_release &kp LCTRL>
+        ;
+    };
+    
+    doc_bot: doc_bot {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        
+        bindings
+            = <&macro_press   &kp LCTRL>
+            , <&macro_tap     &kp END>
+            , <&macro_release &kp LCTRL>
+        ;
+    };
+
     sel_ln: sel_ln { /* select whole line */
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
